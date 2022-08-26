@@ -1,0 +1,51 @@
+div{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+
+.container1{
+    background-color: tomato;
+    width: 1200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.s1, .s2, .s3{
+    width: 200px;
+    background-color: yellow;
+}
+
+.container2{
+    background-color: rebeccapurple;
+    width: 1200px;
+    height: 200px;
+    display: flex;
+}
+
+.section1, .section2, .section3{
+    background-color: white;
+    flex: 1; /* 1/3, 1/3, 1/3 */
+}
+
+.section2{
+    flex: 3;
+}
+
+.section3{
+    flex: 3; /*Rewrites above to include sum of all values*/
+}
+
+/*
+section1 = 1/7
+section2 = 3/7
+section2 = 3/7
+
+TOTAL = 7
+
+(each iteration of flex determains how many pieces of the total pie that the div gets.)
+TOTAL flex(pie) = sum of all flex:(#)(size of the pie)
+*/

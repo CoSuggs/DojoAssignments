@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 class="netwrok">Network</h1>
+        </div>
+    </header>
+    <div class="feed">
+        <h1>Your Feed</h1>
+    </div>
+    <div class="body">
+        <user class="user" id="user">
+            <div><img src="Assets/user-circle.png" alt="profile badge"></div>
+            <div class="link"><a href="#">Add an avatar</a></div>
+            <div>
+                <h1>James Doe</h1>
+            </div>
+        </user>
+        <main>
+            <div class="container">
+                <container>
+                    <lineOne>
+                        <h2>Neil M</h2>
+                        <p id="likesOne">9 like(s)</p>
+                        <button class="btnOne" onclick="addLikesOne()">like</button>
+                    </lineOne>
+                    <lineTwo>
+                        <p>I just set up this discord bot, let me know what you all think. <a href="#">link</a></p>
+                    </lineTwo>
+                </container>
+            </div>
+            <div class="container">
+                <container>
+                    <lineOne>
+                        <h2>Nichole K</h2>
+                        <p id="likesTwo">12 like(s)</p>
+                        <button class="btnTwo" onclick="addLikesTwo()">like</button>
+                    </lineOne>
+                    <lineTwo>
+                        <p>Just finished my <a href="#">next comic,</a> check it out.</p>
+                    </lineTwo>
+                </container>
+            </div>
+            <div class="container">
+                <container>
+                    <lineOne>
+                        <h2>Jim R</h2>
+                        <p id="likesThree">9 like(s)</p>
+                        <button class="btnThree" onclick="addLikesThree()">like</button>
+                    </lineOne>
+                    <lineTwo>
+                        <p>I can't stop listening to the <a href="#">new album</a>. Who else is listening?</p>
+                    </lineTwo>
+                </container>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

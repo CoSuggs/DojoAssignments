@@ -1,0 +1,35 @@
+body{
+    height: 25in;
+    width: 0 auto;
+}
+.container{
+    border: 1px solid black;
+    height: 450px;
+    position: relative;
+}
+
+.element1, .element2{
+    background-color: silver;
+    padding: 10px;
+}
+
+.element1{
+    position: relative;
+    z-index: 1;
+}
+
+.main_element{
+    background-color: yellow;
+    padding: 10px;
+    /*position: static; /*MI element DOES NOT move at all*/
+    /*position: relative; /*Lets me use top, bottom, right, and left,
+    it will move based on the original position of the element */
+    /*position: absolute; /* it will be moving based off of the parent element, 
+    it will be ignored, and ignore the elements around it.*/
+    /*top: 0px;*/
+    /*position: fixed; /*Will not be affected by the scroll, 
+    normally used to keep it at the top of your page while you scroll, 
+    always seen by the user can be used for nav-bar*/
+    position: sticky; /*will stay in the same postion until you scroll can be used for nav-bar*/
+    top: 0;
+}

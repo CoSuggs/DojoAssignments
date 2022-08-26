@@ -1,0 +1,17 @@
+body{
+    background-color: grey;
+    color: aqua;
+}
+h1{
+    background-color: gray;
+    color: aqua;
+}
+.green{
+    color: mediumaquamarine;
+}
+#red{
+    color: tomato;
+}
+.is-centered{
+    text-align: center;
+}

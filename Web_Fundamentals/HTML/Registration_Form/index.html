@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1><strong> Registration Form </strong></h1>
+    <form action="/action" method="post">
+        <div>
+            <label for="first_name_id"><strong>First Name: *</strong></label>
+            <input type="text" id="first_name_id" name="first_name_input" required />
+        </div>
+        <br>
+        <div>
+            <label for="last_name_id"><strong>Last Name: *</strong></label>
+            <input type="text" id="last_name_id" name="last_name_input" required />
+        </div>
+        <br>
+        <div>
+            <label for="email_id"><strong>Email Address: *</strong></label>
+            <input type="email" name="email_input" id="email_id" required />
+        </div>
+        <br>
+        <div>
+            <label for="password_input_id"><strong>Password: *</strong></label>
+            <input id="password_input_id" type="password" name="password_input" required />
+        </div>
+        <br>
+        <div>
+            <label for="c_password_input_id"><strong>Confirm Password: *</strong></label>
+            <input id="c_password_input_id" type="password" name="password_input" required />
+        </div>
+        <br>
+        <div>
+            <label for="birthday_input_id"><strong>Birthday: *</strong></label>
+            <input type="date" name="birth_date_input" id="birthday_input_id" />
+        </div>
+        <br>
+        <div>
+            <p><strong>Gender Identity</strong></p>
+            <input type="radio" name="gender_input" value="Male" id="male_id"  />
+            <label for="male_id"><strong>Male</strong></label>
+            <input type="radio" name="gender_input" value="Female" id="female_id"  />
+            <label for="female_id"><strong>Female</strong></label>
+            <input type="radio" name="gender_input" value="Non-Binary" id="non_binary_id"  />
+            <label for="non_binary_id"><strong>Non-Binary</strong></label>
+            <input type="radio" name="gender_input" value="I_Prefer_not_to_answer" id="I_Prefer_not_to_answer_id" />
+            <label for="I_Prefer_not_to_answer_id"><strong>I prefer not to answer</strong></label>
+        </div>
+        <br>
+        <div>
+            <p><strong>A short description about myself</strong></p>
+            <textarea></textarea>
+        </div>
+        <br>
+        <div>
+            <p><strong>Favorite Language</strong></p>
+            <select name="Favorite_Language">
+                <option>JavaScript</option>
+                <option>html</option>
+                <option>css</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" name="email_updates" id="email_updates_id" />
+            <label for="email_updates_id"><strong>Yes, I would like to receive periodic email updates.</strong></label>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Create_Account" />
+        </div>
+    </form>
+    <p><strong>* Indicates a Required field</strong></p>
+</body>
+</html>

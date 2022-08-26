@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    width: 1050px;
+}
+
+header {
+    display: flex;
+    background-color: gray;
+    width: auto;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10px 0 10px;
+}
+#SearchBar{
+    width: 500px;
+}
+.loginBtn button {
+    background-color: blue;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+}
+
+.loginBtn button:hover {
+    background-color: yellowgreen;
+    color: black;
+}
+
+site {
+    display: flex;
+}
+
+main {
+    display: flex;
+    justify-content: flex-space space-between;
+    flex-direction: column;
+}
+
+/* item {
+    border: 1px solid black;
+    background-color: white;
+    width: 700px;
+    height: 200px;
+} */
+
+block {
+    display: flex;
+    text-align: center;
+}
+
+.ninja {
+    height: 200px;
+    width: 700px;
+    border: 1px solid black;
+    background-color: white;
+    margin: 15px;
+}
+
+block box1s {
+    /* background-color: blue; */
+    /* height: 200px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+box1s button {
+    border: 2px solid black;
+    background-color: yellow;
+    box-shadow: 5px 5px 5px black;
+    width: 115px;
+    height: 40px;
+}
+
+block box2s {
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+block box1s .one box2s .two {
+    align-self: stretch;
+}
+
+sidebar {
+    display: flex;
+    border: 1px solid black;
+    background-color: white;
+    width: 300px;
+    height: 150px;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+sidebar box3s button {
+    display: flex;
+}
+
+box3s {
+    margin: 10px;
+}
+
+box4s {
+    position: relative;
+    /* left: 100px;
+top: 20px; */
+}
+
+box4s button {
+    border: 2px solid black;
+    background-color: rgb(92, 208, 92);
+    box-shadow: 5px 5px 5px black;
+    width: 280px;
+    height: 40px;
+    margin: 0 10px 0 10px;
+}

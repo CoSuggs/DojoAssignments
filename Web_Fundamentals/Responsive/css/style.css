@@ -1,0 +1,38 @@
+.row {
+    content: "";
+    clear: both;
+}
+
+.column {
+    width: 25%;
+    /*4 columns of 25% each*/
+    background-color: blue;
+    float: left;
+}
+
+/*On screens that are 992px or less*/
+
+@media screen and (max-width: 992px) {
+
+    .column {
+        width: 50%;
+        /* 2 columns of 50% each*/
+        background-color: tomato;
+    }
+
+    h2 {
+        font-size: 80px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .column {
+        width: 100%;
+        background-color: green;
+    }
+
+    h2 {
+        font-size: 90px;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Faker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <div class="help_center">
+                <h1>Abstract | <span id="help-text" class="no_bold" onclick="switchClasses()">Help Center</span></h1>
+            </div>
+            <div class="button">
+                <button id="submit" onclick="submitAlert()">Submit Request</button>
+                <button id="sign_in" onclick="changeH2()">Sign In</button>
+            </div>
+        </header>
+    </div>
+    <main>
+        <div class="help">
+            <h2>How can we help?</h2>
+            <input id="search" type="text" placeholder="Search" onchange="searching(this)">
+            <p>
+                You're looking for: <span id="looking-for"></span>
+            </p>
+        </div>
+    </main>
+    <section>
+        <div class="categories">
+            <div class="row">
+                <div class="item">
+                    <div class="icon">
+                        <img onmouseover="changeImg(this)" onmouseout="returnImg(this)" src="Images/Using Abstract.png"
+                            alt="Using Abstract">
+                    </div>
+                    <div class="block">
+                        <h3 onclick="changeTitle(this)" ondblclick="returnTitle(this)">Using Abstract</h3>
+                        <p>Abstract lets you manage, version, and document your designs in one place.</p>
+                        <a href="#" onmouseover="changeColor(this)" onmouseout="originalColor(this)">Learn More -></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <img src="Images/Manage Your Account.png" alt="Manage your Account">
+                    </div>
+                    <div class="block">
+                        <h3>Managing your Account</h3>
+                        <p>Configure your account settings, such as your email, profile details, and password.</p>
+                        <a href="#">Learn More -></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_section">
+            <h4>Abstract</h4>
+            <ul>
+                <li><a href="#">Start Trial</a></li>
+            </ul>
+        </div>
+        <div class="footer_section">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Start Trial</a></li>
+            </ul>
+        </div>
+        <div class="footer_section">
+            <h4>Community</h4>
+            <ul>
+                <li><a href="#">Start Trial</a></li>
+            </ul>
+        </div>
+        <div class="footer_section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">Start Trial</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>
+                © Copyright 2022 <br>
+                Abstract Studio Design, Inc. <br>
+                All rights reserved <br>
+            </p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

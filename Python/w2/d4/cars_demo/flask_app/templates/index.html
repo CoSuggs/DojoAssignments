@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Sales App</title>
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h1>Car Sales App</h1>
+                <a href="/cars/new">Add New Car</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div>
+                    <h2 class="text-center">Current Inventory</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Make</th>
+                                <th>Model</th>
+                                <th>Year</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for car in all_cars %}
+                            {% if car.status != 'sold' %}
+                            <tr>
+                                <td>{{ car.make }}</td>
+                                <td>{{ car.model }}</td>
+                                <td>{{ car.year }}</td>
+                                <td>{{ car.status }}</td>
+                                <td>
+                                    <a href="/cars/{{ car.id }}">View</a>
+                                    <a href="/cars/{{ car.id }}/edit">Edit</a>
+                                    <a class="text-danger" href="/cars/{{ car.id }}/delete">Delete</a>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-6">
+                <h2 class="text-center">Sold Cars</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for car in all_cars %}
+                        {% if car.status == 'sold' %}
+                        <tr>
+                            <td>{{ car.make }}</td>
+                            <td>{{ car.model }}</td>
+                            <td>{{ car.year }}</td>
+                            <td>{{ car.status }}</td>
+                            <td>
+                                <a href="/cars/{{ car.id }}">View</a>
+                                <a href="/cars/{{ car.id }}/edit">Edit</a>
+                                <a class="text-danger" href="/cars/{{ car.id }}/delete">Delete</a>
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- My JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
+
+<!-- for images use <img src="{{ url_for('static', filename='img/') }}" alt=""> -->

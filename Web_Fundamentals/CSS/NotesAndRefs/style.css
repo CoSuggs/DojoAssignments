@@ -1,0 +1,7 @@
+    /*display: flex;*/
+    /*align-items: center; /*center, flex-start, flex-end, baseline, stretch (vertical)*/
+    /*justify-content: center; /*Flex-start(default), flex-end, center, space-between, 
+    space-around, space-evenly (horizontal)*/
+    /*flex-direction: ; /*row, row-reverse, column, column-reverse*/
+    /*flex-wrap: ; /* nowrap, wrap, wrap-reverse*/
+    /*flex-flow: ; /*(flex-flow = flex-direction + flex-wrap*/

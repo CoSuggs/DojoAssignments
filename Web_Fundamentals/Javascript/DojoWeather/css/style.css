@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+header {
+    background-color: lightblue;
+}
+
+nav {
+    width: 1000px;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+nav ul {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+h1,
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.sanjose {
+    width: 1000px;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+}
+
+.week {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    gap: 5%;
+}
+
+.day {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.day img {
+    border-radius: 50%;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.tempr {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.maxTemp {
+    color: tomato;
+}
+
+.minTemp {
+    color: blue;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.cookie {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: blanchedalmond;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    height: 100px;
+}
+
+.cookie img {
+    margin-left: 10px;
+}
+
+.cookie button {
+    margin-right: 10px;
+    background-color: lightblue;
+    width: 150px;
+    height: 25px;
+}

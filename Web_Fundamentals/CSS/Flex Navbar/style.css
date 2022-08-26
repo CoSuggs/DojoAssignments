@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    background-color: gray;
+    color: whitesmoke;
+    height: 75px;
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.nav a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.nav-title {
+    margin-left: 20px;
+}
+
+.btn {
+    height: 35px;
+    width: 100px;
+    background-color: aquamarine;
+    color: whitesmoke;
+    border: none;
+    font-size: 16px;
+    box-shadow: 5px 5px black;
+}
+
+.btn:hover {
+    height: 35px;
+    width: 100px;
+    color: black;
+    border: none;
+    font-size: 16px;
+    background-color: tomato;
+    box-shadow: 5px 5px yellow;
+}

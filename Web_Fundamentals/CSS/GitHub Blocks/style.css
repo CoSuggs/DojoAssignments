@@ -1,0 +1,39 @@
+div{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 620px;
+    height: 614px;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.row_1{
+    background-color: aqua;
+    justify-content: space-between;
+}
+
+.row_2{
+    background-color: black;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.row_3{
+    background-color:aquamarine;
+    /* justify-content: space-between; */
+}
+
+.row_1, .row_2, .row_3{
+    /* width: 650px;
+    height: 200px; */
+}

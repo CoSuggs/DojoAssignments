@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 30px 60px;
+    justify-content: space-between;
+}
+
+.no_bold {
+    font-weight: normal;
+}
+
+.button button {
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#submit {
+    background-color: #191a1b;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#sign_in {
+    background-color: #4C5FD5;
+    border: 1px solid #4C5FD5;
+}
+
+#sign_in:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+}
+
+.help {
+    background-color: #DADBF1;
+    text-align: center;
+    padding: 75px;
+}
+
+.help h2 {
+    font-size: 65px;
+    font-weight: normal;
+}
+
+.help #search {
+    font: 18px;
+    height: 40px;
+    padding: 0 10px 0 10px;
+    width: 700px;
+    margin: 25px;
+}
+
+
+.categories {
+    /* width: 100%; */
+    padding: 100px 50px;
+}
+
+.row {
+    display: flex;
+    padding: 30px 50px;
+}
+
+.item {
+    width: 50%;
+    display: flex;
+}
+
+.item .icon {
+    flex: 1;
+    text-align: right;
+    margin-right: 25px;
+}
+
+.item .icon img {
+    width: 100px;
+}
+
+.item .block {
+    flex: 3;
+}
+
+.item .block h3 {
+    font-size: 25px;
+
+}
+
+.item .block p {
+    font-size: 23px;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.item .block a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #4C5FD5;
+}
+
+.item .block a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 50px 70px;
+}
+
+.footer_section {
+    flex: 1;
+}
+
+.copyright {
+    flex: 2;
+}
+
+.footer_section h4 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer_section ul {
+    list-style: none;
+}
+
+.footer_section ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer_section ul a:hover {
+    text-decoration: underline;
+}
+
+.copyright p {
+    margin-top: 100px;
+}
+
+.italic {
+    font-style: italic;
+}

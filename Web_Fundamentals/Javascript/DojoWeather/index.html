@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Dojo Weather</h1>
+            <ul>
+                <li>
+                    <a href="#" onclick="hereIsAlert(this)">Burbank</a>
+                </li>
+                <li>
+                    <a href="#" onclick="hereIsAlert(this)">Chicago</a>
+                </li>
+                <li>
+                    <a href="#" onclick="hereIsAlert(this)">Dallas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sanjose">
+            <h2>San Jose</h2>
+            <form>
+                <label for="tempr">show temperature in:</label>
+                <select onchange="changeTemperature(this)">
+                    <option>C</option>
+                    <option>F</option>
+                </select>
+            </form>
+        </div>
+        <div class="week">
+            <box class="day">
+                <h3>Today</h3>
+                <img src="assets/some_rain.png" alt="some_rain">
+                <p>
+                    some rain
+                </p>
+                <div class="tempr">
+                    <span id="temp1" class="maxTemp">24</span>
+                    <span id="temp2" class="minTemp">18</span>
+                </div>
+            </box>
+            <box class="day">
+                <h3>Tomorrow</h3>
+                <img src="assets/some_sun.png" alt="some_sun">
+                <p>
+                    some sun
+                </p>
+                <div class="tempr">
+                    <span id="temp3" class="maxTemp">27</span>
+                    <span id="temp4" class="minTemp">19</span>
+                </div>
+            </box>
+            <box class="day">
+                <h3>Friday</h3>
+                <img src="assets/some_clouds.png" alt="some_clouds">
+                <p>
+                    some clouds
+                </p>
+                <div class="tempr">
+                    <span id="temp5" class="maxTemp">21</span>
+                    <span id="temp6" class="minTemp">16</span>
+                </div>
+            </box>
+            <box class="day">
+                <h3>Saturday</h3>
+                <img src="assets/some_sun.png" alt="some_sun">
+                <p>
+                    some sun
+                </p>
+                <div class="tempr">
+                    <span id="temp7" class="maxTemp">26</span>
+                    <span id="temp8" class="minTemp">21</span>
+                </div>
+            </box>
+        </div>
+    </main>
+    <footer>
+        <div class="cookie" id="cookie1">
+            <img src="assets/cookie.png" alt="cookie">
+            <div class="text">
+                <h4>Stop! Cookie Time.</h4>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media
+                    features and to analyse pur trafic. <a href="#">Read more...</a></p>
+            </div>
+            <button onclick="dismissCookie(this)">I Accept</button>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

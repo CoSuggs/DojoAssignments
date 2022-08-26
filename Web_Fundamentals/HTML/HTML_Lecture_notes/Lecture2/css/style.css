@@ -1,0 +1,113 @@
+/*
+element{
+
+}
+
+.class{
+
+}
+
+#id{
+
+}
+
+*/
+
+h5{/*element*/
+    color: blue;
+    border: 1px solid black;
+}
+
+.border_red{ /*class*/
+    border: 2px dotted red;
+}
+
+#p{ /* id = "p" */
+    text-decoration: underline;
+    color: purple;
+}
+
+#h1_id{
+    color: red;
+    text-decoration: underline;
+}
+
+.h1_class{
+    color:blue;
+    border: 3px solid blue;
+}
+
+p strong{ /* strong tags that are inside a paragraph tag*/
+    text-transform: uppercase;
+}
+
+.container > p{ /* < denotes direct descendent of container*/
+    color: aqua;
+}
+
+h2.border_red{ /* the element that is h2 and has class border red*/
+    color: blueviolet;
+}
+
+input[type="text"]{
+    width: 400px;
+}
+
+input[type="number"]{
+    height: 45px;
+}
+
+input, textarea{ /* for both inputs and textareas*/
+    border: 2px solid magenta;
+}
+
+/*TEXT*/
+#text_properties{
+    text-align: center; /*left, right, center, justify*/
+    text-decoration: underline; /*underline, line-through, none, overline*/
+    font-style: italic; /*italic, normal*/
+    font-weight: bold; /*normal, bold, light, 100, 200, 300, 900*/
+    font-size: 35px; /*px, pt, vh, vw*/
+}
+
+/*SIZE*/
+#size_properties {
+    background-color: gray;
+    width: 400px;
+    height: 50px;
+}
+
+/*BACKGROUND*/
+#background_properties{
+    width: 400px;
+    height: 600px;
+    border: black;
+
+    background-color: aqua;
+    background-image: url("../../../Portfolio_HTML/Portfolio_Picture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#box_model{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+
+    padding: 25px 10px;
+    margin: 10px auto;
+    border: 3px solid black;
+
+}
+
+button{
+    background-color: rebeccapurple;
+    color: white;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: black;
+    color: purple;
+    padding: 25px;
+}
