@@ -34,14 +34,14 @@ const expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
  */
 function selectionSort(nums = []) {
     for (let i = 0; i < nums.length; i++) {
-        for(let j = 0; j<nums.length; j++){
-            if(nums[i]<nums[j]){
+        for (let j = 0; j < nums.length; j++) {
+            if (nums[i] < nums[j]) {
                 let temp = nums[i]
                 nums[i] = nums[j]
                 nums[j] = temp
             }
         }
-    }return nums
+    } return nums
 }
 console.log(selectionSort(numsRandomOrder));
 console.log(selectionSort(numsReversed));
@@ -85,14 +85,31 @@ console.log(selectionSort(numsReversed));
  */
 function insertionSort(nums = []) {
     for (let i = 0; i < nums.length; i++) {
-        for(let j = 0; j<nums.length; j++){
-            if(nums[j]>nums[j+1]){
-                let temp = nums[j+1]
-                nums[j+1] = nums[j]
+        for (let j = 0; j < nums.length; j++) {
+            if (nums[j] > nums[j + 1]) {
+                let temp = nums[j + 1]
+                nums[j + 1] = nums[j]
                 nums[j] = temp
             }
         }
-    }return nums
+    } return nums
 }
 console.log(insertionSort(numsRandomOrder));
 console.log(insertionSort(numsReversed));
+
+function insertionSortSwap(nums = []) {
+    for (let i = 1; i < nums.length; i++) {
+        let currIdx = i; // to avoid altering i directly
+        let leftIdx = currIdx - 1; // compare to the left
+
+        while (leftIdx >= 0 && nums[leftIdx] > nums[currIdx]) {
+            // destructure swap notation
+            [nums[leftIdx], nums[currIdx]] = [nums[currIdx], nums[leftIdx]];
+
+            // curr got swapped to the left, so currIdx is now 1 to the left
+            currIdx--;
+            leftIdx = currIdx - 1;
+        }
+    }
+    return nums;
+}
