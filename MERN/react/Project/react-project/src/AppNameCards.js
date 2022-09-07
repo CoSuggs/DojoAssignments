@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import PersonComponent from './components/MyNewComponents';
+import PersonComponent from './components/NameCardComponents';
 var peopleArr =[
     {"firstName":"Jane", "lastName":"Doe", "age":45, "hairColor":"Black"},
     {"firstName":"John", "lastName":"Smith", "age":88, "hairColor":"Brown"},
