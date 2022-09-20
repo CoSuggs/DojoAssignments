@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/productdb', {
+mongoose.connect('mongodb://127.0.0.1/persondb', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })

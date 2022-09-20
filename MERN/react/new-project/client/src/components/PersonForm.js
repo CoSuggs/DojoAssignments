@@ -7,7 +7,7 @@ export default props =>{
 
     const onSubmitHnadler = e => {
         e.preventDefault();
-        axios.post('http://localhost:8001/api/people', {
+        axios.post('http://localhost:8000/api/people', {
             firstName,
             lastName
         })
