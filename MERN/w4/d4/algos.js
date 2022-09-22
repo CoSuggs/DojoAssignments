@@ -44,7 +44,22 @@ const expected6 = 1;
  * @param {string} v2
  * @returns {number} 1 if v1 greater, -1 if v1 smaller, 0 if equal.
  */
-function compareVersionNumbers(v1, v2) { }
+function compareVersionNumbers(v1, v2) {
+    let splitV1 = v1.split('.').map((x => parseInt(x))).join('')
+    let splitV2 = v2.split('.').map((x => parseInt(x))).join('')
+    if(splitV1 === splitV2){
+        return 0;
+    } else if (splitV1 > splitV2){
+        return 1
+    }
+    return -1
+}
+console.log(compareVersionNumbers(test1V1, test1V2))
+console.log(compareVersionNumbers(test2V1, test2V2))
+console.log(compareVersionNumbers(test3V1, test3V2))
+console.log(compareVersionNumbers(test4V1, test4V2))
+console.log(compareVersionNumbers(test5V1, test5V2))
+console.log(compareVersionNumbers(test6V1, test6V2))
 
 /************************************************************************************************************************************* */
 
