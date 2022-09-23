@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <h1>Jokes API</h1>
       <Routes>
-        <Route element={<Main />} path="/joke/" />
-        <Route element={<Detail />} path="/joke/:id" />
-        <Route element={<Update/>} path="/joke/:id/edit" />
+        <Route element={<Main />} path="/homeToDo/" />
+        <Route element={<Detail />} path="/homeToDo/:id" />
+        <Route element={<Update/>} path="/homeToDO/:id/edit" />
       </Routes>
     </div>
   );
