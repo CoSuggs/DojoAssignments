@@ -57,20 +57,28 @@ class SLL {
         } return false
     }
 
+    removeHead() {
+        // reassign the head
+        if (!this.head) return this;
+        this.head = this.head.next;
+        return this;
+    }
+
     /**
      * Removes the last node of this list.
      * @returns {any} The data from the node that was removed.
      */
     removeBack() {
-        if (!this.head) {
-            console.log("Empty list");
-            return
+        let runner = this.head;
+        let runnerPrevious;
+        if (!runner.next) {
+            runner = null
         }
-        var runner = this.head;
-        while (runner) {
-            console.log(runner.data);
+        while (runner.next) {
+            runnerPrevious = runner;
             runner = runner.next;
         }
+        runnerPrevious.next = null;
     }
 
     /**
@@ -82,7 +90,9 @@ class SLL {
      *    or null when the end of the list has been reached.
      * @returns {boolean}
      */
-    containsRecursive(val, current = this.head) { }
+    containsRecursive(val, current = this.head) {
+        
+    }
 
     // EXTRA
     /**
@@ -116,4 +126,9 @@ list2.printList();
 console.log(list2.contains(3))
 // expected result: true
 console.log(list2.contains(1000))
-  // expected result: false
+// expected result: false
+
+list2.printList();
+list2.removeBack();
+
+list2.printList();
