@@ -53,10 +53,7 @@ class MinHeap {
         if (this.heap == null) {
             this.heap[0] = 0;
             this.heap[1] = num;
-        }
-        if (this.heap !== null) {
-            this.heap.push(num);
-        }
+        } this.heap.push(num);
         for (let i = 1; i < this.heap.length; i++) {
             if (this.heap[i] < this.heap[Math.floor(i / 2)]) {
                 let temp = this.heap[i];
