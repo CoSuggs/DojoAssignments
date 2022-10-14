@@ -20,6 +20,7 @@ class DoublyLinkedList {
    * instance that inherits these methods and properties.
    */
   constructor() {
+    // TODO: implement the constructor.
     this.head = null;
     this.tail = null;
   }
@@ -32,18 +33,38 @@ class DoublyLinkedList {
    * @returns {DoublyLinkedList} This list.
    */
   insertAtFront(data) {
-    let newNode = new Node(data);
-    newNode.next = this.head;
-    newNode.prev = null;
-    
-    if(this.head != null){
-      this.head.prev = newNode;
-    } else {
-      this.tail = newNode;
-    }
-    this.head = newNode;
+        // here we create the node and put in the data
+        let newNode = new Node(data);
+
+        // make the next of new node as node and prev as null
+        newNode.next = this.head;
+        newNode.prev = null;
+
+        // here we change the prev to the new node
+        if (this.head != null) {
+            this.head.prev = newNode;
+        }else{
+          this.tail= newNode;
+        }
+        // move the head to point to the new node
+        this.head = newNode;
   }
 
+  insertAtFront2(data) {
+    const newHead = new DLLNode(data);
+
+    if (this.isEmpty()) {
+      this.head = newHead;
+      this.tail = newHead;
+    } else {
+      const oldHead = this.head;
+      oldHead.prev = newHead;
+      newHead.next = oldHead;
+      this.head = newHead;
+    }
+    return this;
+  }
+  
   /**
    * Creates a new node and adds it at the back of this list.
    * - Time: O(?).
@@ -52,18 +73,17 @@ class DoublyLinkedList {
    * @returns {DoublyLinkedList} This list.
    */
   insertAtBack(data) {
-    let newNode = new Node(data);
-    if (this.head == null) {
-      this.head = newNode;
-      this.tail = newNode;
-      this.next = null;
-      this.prev = null;
+    const newTail = new DLLNode(data);
+
+    if (this.isEmpty()) {
+      // if no head set the newTail to be both the head and the tail
+      this.head = newTail;
+      this.tail = newTail;
     } else {
-      let temp = this.tail;
-      this.tail = newNode;
-      newNode.next = null;
-      newNode.prev = temp;
-      temp.next = newNode;
+      this.tail.next = newTail;
+      newTail.prev = this.tail;
+
+      this.tail = newTail;
     }
     return this;
   }
@@ -76,28 +96,35 @@ class DoublyLinkedList {
    * @returns {any} The data of the removed node.
    */
   removeMiddleNode() {
-    if (this.head.data === data) {
-      let temp = this.head.next;
-      this.head.next = null;
-      this.head = temp;
-      this.head.pre = null
-    } else if (this.tail.data = data) {
-      let temp = this.tail.pre;
-      this.tail = temp;
-      temp.next = null;
-    } else if (runner.data === data) {
-      let temp = runner.next;
-      let tempPre = runner.pre;
-      runner.next = null;
-      runner.pre = null;
-      temp.pre = tempPre
-      tempPre.next = temp;
-      return;
+    // when there is only 1 node, it is the middle, remove it.
+    if (!this.isEmpty() && this.head === this.tail) {
+      const removedData = this.head.data;
+      this.head = null;
+      this.tail = null;
+      return removedData;
     }
-    runner = runner.next;
+
+    let forwardRunner = this.head;
+    let backwardsRunner = this.tail;
+
+    while (forwardRunner && backwardsRunner) {
+      if (forwardRunner === backwardsRunner) {
+        const midNode = forwardRunner;
+        midNode.prev.next = midNode.next;
+        midNode.next.prev = midNode.prev;
+        return midNode.data;
+      }
+
+      // runners passed each other without stopping on the same node, even length, we can exit early
+      if (forwardRunner.prev === backwardsRunner) {
+        return null;
+      }
+
+      forwardRunner = forwardRunner.next;
+      backwardsRunner = backwardsRunner.prev;
+    }
+    return null;
   }
-
-
 
   /**
    * Determines if this list is empty.
@@ -138,9 +165,8 @@ class DoublyLinkedList {
 }
 
 const emptyList = new DoublyLinkedList();
-
-// console.log(emptyList.insertAtFront(4));
-// console.log(emptyList.insertAtFront(7));
-// console.log(emptyList.insertAtFront(9));
-
-console.log(emptyList.insertAtBackMany([8, 9, 10]));
+emptyList.insertAtFront(5);
+emptyList.insertAtFront(2);
+emptyList.insertAtBack(10);
+emptyList.insertAtBack(25);
+console.log(emptyList.toArray());
